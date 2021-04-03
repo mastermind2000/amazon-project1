@@ -1,2 +1,2 @@
-# amazon-project1
+# dashboardv1.0
 Created with CodeSandbox
