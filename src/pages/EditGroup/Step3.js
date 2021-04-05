@@ -1,21 +1,19 @@
 import React from "react";
 
 import ItemForm from "./ItemForm";
-import StateDrop from "./StateDrop";
 
-const Step2 = ({ setForm, formData, navigation }) => {
-  const { policies } = formData;
+const Step3 = ({ setForm, formData, navigation }) => {
+  const { email } = formData;
 
   const { previous, next } = navigation;
 
   return (
     <div className="form">
-      <h3>Address</h3>
-
-      <StateDrop
-        label="Policies"
-        name="policies"
-        value={policies}
+      <h3>Contact </h3>
+      <ItemForm
+        label="Username"
+        name="email"
+        value={email}
         onChange={setForm}
       />
       <div>
@@ -26,4 +24,4 @@ const Step2 = ({ setForm, formData, navigation }) => {
   );
 };
 
-export default Step2;
+export default Step3;

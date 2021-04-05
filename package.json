@@ -25,6 +25,7 @@
     "react-dom": "17.0.1",
     "react-final-form": "6.5.3",
     "react-hook-form": "6.15.5",
+    "react-hooks-helper": "1.6.0",
     "react-native-html-to-pdf": "0.9.1",
     "react-native-link": "4.1.0",
     "react-native-print": "0.7.0",

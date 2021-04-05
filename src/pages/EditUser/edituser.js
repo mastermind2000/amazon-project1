@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 import MultiStepForm from "./MultiStepForm";
 
-export default function editgroup() {
+export default function edituser() {
   return (
     <div className="app">
       <div className="wrapper">
@@ -14,4 +14,4 @@ export default function editgroup() {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<editgroup />, rootElement);
+ReactDOM.render(<edituser />, rootElement);

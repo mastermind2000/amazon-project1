@@ -3,17 +3,17 @@ import React from "react";
 import ItemForm from "./ItemForm";
 
 const Step1 = ({ setForm, formData, navigation }) => {
-  const { groupName } = formData;
+  const { userName } = formData;
 
   const { next } = navigation;
 
   return (
     <div className="form">
       <ItemForm
-        label="Group Name"
+        label="User Name"
         type="text"
-        name="groupName"
-        value={groupName}
+        name="userName"
+        value={userName}
         onChange={setForm}
       />
       <div>
