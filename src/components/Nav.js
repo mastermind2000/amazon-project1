@@ -186,23 +186,23 @@ class Nav extends Component {
             <NavLink activeClassName="active" to="/">
               <li>Create User</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/about">
-              <li>Policies</li>
-            </NavLink>
             <NavLink activeClassName="active" to="/contact">
               <li>Delete User</li>
             </NavLink>
             <NavLink activeClassName="active" to="/UserForm">
               <li>Edit User</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/sauvegarde">
-              <li>Usage</li>
-            </NavLink>
             <NavLink activeClassName="active" to="/creategroup">
               <li>Create Group</li>
             </NavLink>
             <NavLink activeClassName="active" to="/editgroup">
               <li>Edit Group</li>
+            </NavLink>
+            <NavLink activeClassName="active" to="/about">
+              <li>Policies</li>
+            </NavLink>
+            <NavLink activeClassName="active" to="/sauvegarde">
+              <li>Usage</li>
             </NavLink>
           </ul>
         </nav>

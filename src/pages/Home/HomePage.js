@@ -32,11 +32,11 @@ const validate = (values) => {
   if (!values.email) {
     errors.email = "Required";
   }
-  if (!values.policy) {
-    errors.policy = "Select a policy";
+  if (!values.group) {
+    errors.group = "Select a group";
   }
-  if (!values.instance) {
-    errors.instance = "Select an instance";
+  if (!values.policy) {
+    errors.policy = "Select a Policy";
   }
   return errors;
 };
@@ -51,7 +51,7 @@ export default function Home() {
       <CssBaseline />
       <Form
         onSubmit={onSubmit}
-        initialValues={{ role: "student", time: "20" }}
+        initialValues={{ role: "student" }}
         validate={validate}
         render={({ handleSubmit, reset, submitting, pristine, values }) => (
           <form onSubmit={handleSubmit} noValidate>
@@ -122,53 +122,65 @@ export default function Home() {
                   <Condition when="role" is="student">
                     <Field
                       fullWidth
-                      name="policy"
+                      name="group"
                       component={Select}
                       label="Apply Group"
                       formControlProps={{ fullWidth: true }}
                     >
-                      <MenuItem value="Policy1">Student</MenuItem>
+                      <MenuItem value="Group1">Student</MenuItem>
                     </Field>
                   </Condition>
                   <Condition when="role" is="faculty">
                     <Field
                       fullWidth
-                      name="policy"
+                      name="group"
                       component={Select}
                       label="Apply Group"
                       formControlProps={{ fullWidth: true }}
                     >
-                      <MenuItem value="Policy2">Faculty</MenuItem>
+                      <MenuItem value="Group2">Faculty</MenuItem>
                     </Field>
                   </Condition>
                   <Condition when="role" is="admin">
                     <Field
                       fullWidth
-                      name="policy"
+                      name="group"
                       component={Select}
                       label="Apply Group"
                       formControlProps={{ fullWidth: true }}
                     >
-                      <MenuItem value="Policy3">Admin</MenuItem>
+                      <MenuItem value="Group3">Admin</MenuItem>
                     </Field>
                   </Condition>
                 </Grid>
                 <Grid item xs={12}>
-                  <Field
-                    fullWidth
-                    name="instance"
-                    component={Select}
-                    label="Select Instance Types"
-                    formControlProps={{ fullWidth: true }}
-                  >
-                    <MenuItem value="Standard">Standard</MenuItem>
-                    <MenuItem value="ComputeOptimised">
-                      ComputeOptimised
-                    </MenuItem>
-                    <MenuItem value="AcceleratedComputing">
-                      AcceleratedComputing
-                    </MenuItem>
-                  </Field>
+                  <Condition when="role" is="student">
+                    <Field
+                      fullWidth
+                      name="policy"
+                      component={Select}
+                      label="Select Policies"
+                      formControlProps={{ fullWidth: true }}
+                    >
+                      <MenuItem value="Policy1">
+                        {" "}
+                        Jupyter Notebook of instance type ml.t2.medium for 60
+                        mins duration
+                      </MenuItem>
+                      <MenuItem value="Policy2">
+                        Jupyter Notebook of instance type ml.t2.large for 30
+                        mins duration
+                      </MenuItem>
+                      <MenuItem value="Policy3">
+                        Processing Job of instance ml.t3.medium with instance
+                        count 1 and additional volume for storage 1GB
+                      </MenuItem>
+                      <MenuItem value="Policy4">
+                        Training Job of instance ml.t3.medium with instance
+                        count 1 and additional volume for storage 1GB
+                      </MenuItem>
+                    </Field>
+                  </Condition>
                 </Grid>
                 <Grid item style={{ marginTop: 16 }}>
                   <Button
