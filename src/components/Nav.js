@@ -189,7 +189,7 @@ class Nav extends Component {
             <NavLink activeClassName="active" to="/contact">
               <li>Delete User</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/UserForm">
+            <NavLink activeClassName="active" to="/edituser">
               <li>Edit User</li>
             </NavLink>
             <NavLink activeClassName="active" to="/creategroup">

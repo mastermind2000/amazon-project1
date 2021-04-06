@@ -78,7 +78,7 @@ export default function Home() {
                     label="Email"
                   />
                 </Grid>
-                <Grid item>
+                <Grid item xs={12}>
                   <FormControl component="fieldset">
                     <FormLabel component="legend">Add Roles</FormLabel>
                     <RadioGroup row>
